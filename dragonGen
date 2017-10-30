@@ -5,6 +5,7 @@
 # For the dragon curves, each True symbolizes a right turn and each 0 symbolizes a left turn
 # Each iteration is the previous iteration followed by a right turn, followed by the reversed inverse of
 def dragon(iteration):
+    # p is the previous iteration and q will be its reverse inverse
     p = iteration
     q = []
 
@@ -30,4 +31,16 @@ def dragon(iteration):
     # return the next iteration
     return next
 
-print(dragon([1]))
+
+def iterChoose(iteration):
+    # n is the desired iteration and f is the first iteration
+    n = iteration
+    f = [1]
+
+    # The previous function will be used to generate the desired iteration's instructions
+    for i in range(n):
+        t = dragon(f)
+        f = t
+    # Return the iteration's instructions
+    it = f
+    return it
