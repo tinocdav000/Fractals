@@ -1,4 +1,4 @@
-import Generator as g
+import dragoGen as g
 import turtle as t
 
 it = g.iterChoose(15)
