@@ -1,0 +1,21 @@
+import Generator as g
+import turtle as t
+
+it = g.iterChoose(15)
+print(it)
+
+t.lt(90)
+
+t.Screen()
+
+t.speed(0)
+
+for i in it:
+    t.fd(1)
+    if i == True:
+        t.rt(90)
+    elif i == False:
+        t.lt(90)
+t.fd(10)
+
+t.exitonclick()
